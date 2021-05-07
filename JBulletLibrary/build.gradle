@@ -1,0 +1,94 @@
+// Note: "common.gradle" in the root project contains additional initialization
+//   for this project. This initialization is applied in the "build.gradle"
+//   of the root project.
+
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+}
+
+description = 'A Java port of the Bullet Physics Library'
+ext {
+    artifact = 'jbullet'
+    version = jbulletVersion
+    baseName = "${artifact}-${version}"
+}
+
+javadocJar { archiveBaseName = project.ext.baseName }
+sourcesJar { archiveBaseName = project.ext.baseName }
+
+dependencies {
+    compileOnly 'stack-alloc:stack-alloc'
+    compileOnly 'javax.vecmath:vecmath'
+}
+
+sourceSets.main.java {
+    srcDirs = [rootProject.file('src')]
+}
+
+javadoc {
+    // Disable doclint for JDK8+.
+    if (JavaVersion.current().isJava8Compatible()){
+        options.addStringOption('Xdoclint:none', '-quiet')
+    }
+}
+
+// publishing tasks
+
+build.dependsOn('javadocJar', 'pom', 'sourcesJar')
+task('pom', type: Copy) {
+    dependsOn 'generatePomFileForMavenPublication'
+    from "${buildDir}/publications/maven/pom-default.xml"
+    into "${buildDir}/libs"
+    rename 'pom-default.xml', baseName + '.pom'
+}
+
+publishToMavenLocal.doLast {
+    println 'published to ' + baseName
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            artifact javadocJar
+            artifact sourcesJar
+            artifactId artifact
+            from components.java
+            pom {
+                description = project.description
+                developers {
+                    developer {
+                        email = 'jezek2@advel.cz'
+                        name = 'Martin Dvorak'
+                    }
+                }
+                licenses {
+                    license {
+                        distribution = 'repo'
+                        name = 'Zlib License'
+                        url = 'https://opensource.org/licenses/zlib-license.php'
+                    }
+                }
+                name = 'com.github.stephengold:' + artifact
+                scm {
+                    connection = 'scm:git:git://github.com/stephengold/jbullet.git'
+                    developerConnection = 'scm:git:ssh://github.com:stephengold/jbullet.git'
+                    url = 'https://github.com/stephengold/jbullet/tree/master'
+                }
+                url = 'https://github.com/stephengold/jbullet'
+            }
+            version project.ext.version
+        }
+    }
+    repositories {
+        maven {
+            credentials {
+                username = project.hasProperty('ossrhUsername') ? ossrhUsername : 'Unknown user'
+                password = project.hasProperty('ossrhPassword') ? ossrhPassword : 'Unknown password'
+            }
+            name = 'OSSRH'
+            url = 'https://oss.sonatype.org/service/local/staging/deploy/maven2'
+        }
+    }
+}
+generateMetadataFileForMavenPublication.dependsOn('pom')
