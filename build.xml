@@ -87,7 +87,7 @@
 		
 		<!-- jbullet-demos.jar -->
 		<jar destfile="dist/jbullet-demos.jar" basedir="build/classes" includes="com/bulletphysics/demos/**" excludes="**/*.java,**/*.form,**/*.diff"/>
-	<!--	<jar destfile="dist/vecmath.jar" basedir="vecmath/" excludes="**/*.java,**/*.form"/> -->
+	<!--	<jar destfile="dist/vecmath-1.5.2.jar" basedir="vecmath/" excludes="**/*.java,**/*.form"/> -->
 	</target>
 	
 	<target depends="init" name="-javadoc-build">
@@ -99,7 +99,7 @@
 			<group title="Dynamics library" packages="com.bulletphysics.dynamics*"/>
 			<group title="Extras" packages="com.bulletphysics.extras*"/>
 			<link href="http://java.sun.com/javase/6/docs/api/" offline="true" packagelistloc="lib/javadoc/jdk"/>
-			<link href="http://download.java.net/media/java3d/javadoc/1.5.1/" offline="true" packagelistloc="lib/javadoc/vecmath"/>
+			<link href="http://download.java.net/media/java3d/javadoc/1.5.2/" offline="true" packagelistloc="lib/javadoc/vecmath"/>
 			<classpath>
 				<path path="${javac.classpath}"/>
 			</classpath>
@@ -137,7 +137,7 @@
 		<jar destfile="dist/jbullet-applet.jar">
 			<zipfileset src="dist/jbullet.jar" excludes="META-INF/**" filemode="644" dirmode="755"/>
 			<zipfileset src="dist/jbullet-demos.jar" excludes="META-INF/**" filemode="644" dirmode="755"/>
-			<zipfileset src="lib/vecmath/vecmath.jar" excludes="META-INF/**" filemode="644" dirmode="755"/>
+			<zipfileset src="lib/vecmath/vecmath-1.5.2.jar" excludes="META-INF/**" filemode="644" dirmode="755"/>
 			<zipfileset src="lib/swing-layout/swing-layout-1.0.3.jar" excludes="META-INF/**" filemode="644" dirmode="755"/>
 		</jar>
 	</target>
