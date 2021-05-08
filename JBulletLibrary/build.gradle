@@ -18,7 +18,7 @@ javadocJar { archiveBaseName = project.ext.baseName }
 sourcesJar { archiveBaseName = project.ext.baseName }
 
 dependencies {
-    compileOnly 'stack-alloc:stack-alloc'
+    implementation 'com.github.stephengold:stack-alloc:1.0.1'
     implementation 'javax.vecmath:vecmath:1.5.2'
 }
 

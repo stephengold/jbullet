@@ -25,7 +25,6 @@ ext {
 repositories {
     //mavenLocal()
     mavenCentral()
-    flatDir { dirs rootProject.file('lib/jstackalloc') }
     flatDir { dirs rootProject.file('lib/lwjgl') }
     flatDir { dirs rootProject.file('lib/swing-layout') }
 }
