@@ -19,7 +19,7 @@ sourcesJar { archiveBaseName = project.ext.baseName }
 
 dependencies {
     compileOnly 'stack-alloc:stack-alloc'
-    compileOnly 'javax.vecmath:vecmath'
+    implementation 'javax.vecmath:vecmath:1.5.2'
 }
 
 sourceSets.main.java {

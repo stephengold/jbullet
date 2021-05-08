@@ -19,6 +19,7 @@ gradle.projectsEvaluated {
 ext {
     // current versions of various libraries
     jbulletVersion = '1.0.0'
+    vecmathVersion = '1.5.2'
 }
 
 repositories {
@@ -27,7 +28,6 @@ repositories {
     flatDir { dirs rootProject.file('lib/jstackalloc') }
     flatDir { dirs rootProject.file('lib/lwjgl') }
     flatDir { dirs rootProject.file('lib/swing-layout') }
-    flatDir { dirs rootProject.file('lib/vecmath') }
 }
 
 // custom tasks for creating source/javadoc JARs
