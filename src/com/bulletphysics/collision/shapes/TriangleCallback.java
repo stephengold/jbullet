@@ -31,7 +31,7 @@ import javax.vecmath.Vector3f;
  * 
  * This callback is called by processAllTriangles for all {@link ConcaveShape} derived
  * classes, such as {@link BvhTriangleMeshShape}, {@link StaticPlaneShape} and
- * {@link HeightfieldTerrainShape}.
+ * {@link com.bulletphysics.dom.HeightfieldTerrainShape}.
  * 
  * @author jezek2
  */

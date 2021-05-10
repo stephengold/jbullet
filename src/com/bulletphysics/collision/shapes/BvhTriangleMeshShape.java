@@ -35,7 +35,7 @@ import javax.vecmath.Vector3f;
  * such as bounding volume hierarchy. It is recommended to enable useQuantizedAabbCompression
  * for better memory usage.<p>
  *
- * It takes a triangle mesh as input, for example a {@link TriangleMesh} or
+ * It takes a triangle mesh as input, for example a
  * {@link TriangleIndexVertexArray}. The BvhTriangleMeshShape class allows for
  * triangle mesh deformations by a refit or partialRefit method.<p>
  *

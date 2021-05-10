@@ -40,9 +40,7 @@ import javax.vecmath.Vector3f;
  * The total height is height+2*radius, so the height is just the height between
  * the center of each "sphere" of the capsule caps.<p>
  *
- * CapsuleShape is a convex hull of two spheres. The {@link MultiSphereShape} is
- * a more general collision shape that takes the convex hull of multiple sphere,
- * so it can also represent a capsule when just using two spheres.
+ * CapsuleShape is a convex hull of two spheres.
  * 
  * @author jezek2
  */
