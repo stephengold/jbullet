@@ -42,12 +42,9 @@ public class ObjectPool<T> {
 
 	private T create() {
 		try {
-			return cls.newInstance();
+			return cls.getDeclaredConstructor().newInstance();
 		}
-		catch (InstantiationException e) {
-			throw new IllegalStateException(e);
-		}
-		catch (IllegalAccessException e) {
+		catch (ReflectiveOperationException e) {
 			throw new IllegalStateException(e);
 		}
 	}
