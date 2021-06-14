@@ -62,7 +62,7 @@ public abstract class DiscreteCollisionDetectorInterface {
 	}
 
 	/**
-	 * Give either closest points (distance > 0) or penetration (distance)
+	 * Give either closest points (distance &gt; 0) or penetration (distance)
 	 * the normal always points from B towards A.
 	 */
 	public final void getClosestPoints(ClosestPointInput input,Result output, IDebugDraw debugDraw) {
@@ -70,7 +70,7 @@ public abstract class DiscreteCollisionDetectorInterface {
 	}
 	
 	/**
-	 * Give either closest points (distance > 0) or penetration (distance)
+	 * Give either closest points (distance &gt; 0) or penetration (distance)
 	 * the normal always points from B towards A.
 	 */
 	public abstract void getClosestPoints(ClosestPointInput input,Result output, IDebugDraw debugDraw, boolean swapResults);
