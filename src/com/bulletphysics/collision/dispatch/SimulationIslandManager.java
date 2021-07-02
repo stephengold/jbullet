@@ -333,6 +333,7 @@ public class SimulationIslandManager {
 	}
 	
 	private static final Comparator<PersistentManifold> persistentManifoldComparator = new Comparator<PersistentManifold>() {
+                @Override
 		public int compare(PersistentManifold lhs, PersistentManifold rhs) {
 			return getIslandId(lhs) < getIslandId(rhs)? -1 : +1;
 		}

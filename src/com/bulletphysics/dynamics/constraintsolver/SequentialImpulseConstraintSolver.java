@@ -89,6 +89,7 @@ public class SequentialImpulseConstraintSolver extends ConstraintSolver {
 
 	public SequentialImpulseConstraintSolver() {
 		BulletGlobals.setContactDestroyedCallback(new ContactDestroyedCallback() {
+                        @Override
 			public boolean contactDestroyed(Object userPersistentData) {
 				assert (userPersistentData != null);
 				ConstraintPersistentData cpd = (ConstraintPersistentData) userPersistentData;

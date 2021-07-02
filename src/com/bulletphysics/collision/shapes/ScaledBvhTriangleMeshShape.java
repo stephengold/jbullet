@@ -166,6 +166,7 @@ public class ScaledBvhTriangleMeshShape extends ConcaveShape {
 			}
 		}
 
+                @Override
 		public void processTriangle(Vector3f[] triangle, int partId, int triangleIndex) {
 			VectorUtil.mul(newTriangle[0], triangle[0], localScaling);
 			VectorUtil.mul(newTriangle[1], triangle[1], localScaling);

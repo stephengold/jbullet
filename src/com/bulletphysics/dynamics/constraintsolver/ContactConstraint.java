@@ -40,18 +40,21 @@ import javax.vecmath.Vector3f;
 public class ContactConstraint {
 	
 	public static final ContactSolverFunc resolveSingleCollision = new ContactSolverFunc() {
+                @Override
 		public float resolveContact(RigidBody body1, RigidBody body2, ManifoldPoint contactPoint, ContactSolverInfo info) {
 			return resolveSingleCollision(body1, body2, contactPoint, info);
 		}
 	};
 
 	public static final ContactSolverFunc resolveSingleFriction = new ContactSolverFunc() {
+                @Override
 		public float resolveContact(RigidBody body1, RigidBody body2, ManifoldPoint contactPoint, ContactSolverInfo info) {
 			return resolveSingleFriction(body1, body2, contactPoint, info);
 		}
 	};
 
 	public static final ContactSolverFunc resolveSingleCollisionCombined = new ContactSolverFunc() {
+                @Override
 		public float resolveContact(RigidBody body1, RigidBody body2, ManifoldPoint contactPoint, ContactSolverInfo info) {
 			return resolveSingleCollisionCombined(body1, body2, contactPoint, info);
 		}

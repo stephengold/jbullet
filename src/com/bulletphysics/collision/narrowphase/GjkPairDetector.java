@@ -71,6 +71,7 @@ public class GjkPairDetector extends DiscreteCollisionDetectorInterface {
 	}
 	
 	@StaticAlloc
+        @Override
 	public void getClosestPoints(ClosestPointInput input, Result output, IDebugDraw debugDraw, boolean swapResults) {
 		Vector3f tmp = Stack.alloc(Vector3f.class);
 

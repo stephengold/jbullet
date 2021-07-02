@@ -257,6 +257,7 @@ public class BvhTriangleMeshShape extends TriangleMeshShape {
 			this.callback = callback;
 		}
 
+                @Override
 		public void processNode(int nodeSubPart, int nodeTriangleIndex) {
 			VertexData data = meshInterface.getLockedReadOnlyVertexIndexBase(nodeSubPart);
 

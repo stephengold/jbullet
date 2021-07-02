@@ -232,6 +232,7 @@ public class CollisionDispatcher extends Dispatcher {
 			this.dispatcher = dispatcher;
 		}
 		
+                @Override
 		public boolean processOverlap(BroadphasePair pair) {
 			dispatcher.getNearCallback().handleCollision(pair, dispatcher, dispatchInfo);
 			return false;

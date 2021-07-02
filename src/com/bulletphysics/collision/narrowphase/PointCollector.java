@@ -37,10 +37,12 @@ public class PointCollector extends DiscreteCollisionDetectorInterface.Result {
 
 	public boolean hasResult = false;
 	
+        @Override
 	public void setShapeIdentifiers(int partId0, int index0, int partId1, int index1) {
 		// ??
 	}
 
+        @Override
 	public void addContactPoint(Vector3f normalOnBInWorld, Vector3f pointInWorld, float depth) {
 		if (depth < distance) {
 			hasResult = true;

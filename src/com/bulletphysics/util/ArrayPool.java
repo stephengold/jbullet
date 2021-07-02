@@ -131,6 +131,7 @@ public class ArrayPool<T> {
 	////////////////////////////////////////////////////////////////////////////
 
 	private static Comparator floatComparator = new Comparator() {
+                @Override
 		public int compare(Object o1, Object o2) {
 			int len1 = (o1 instanceof IntValue)? ((IntValue)o1).value : ((float[])o1).length;
 			int len2 = (o2 instanceof IntValue)? ((IntValue)o2).value : ((float[])o2).length;
@@ -139,6 +140,7 @@ public class ArrayPool<T> {
 	};
 
 	private static Comparator intComparator = new Comparator() {
+                @Override
 		public int compare(Object o1, Object o2) {
 			int len1 = (o1 instanceof IntValue)? ((IntValue)o1).value : ((int[])o1).length;
 			int len2 = (o2 instanceof IntValue)? ((IntValue)o2).value : ((int[])o2).length;
@@ -147,6 +149,7 @@ public class ArrayPool<T> {
 	};
 	
 	private static Comparator objectComparator = new Comparator() {
+                @Override
 		public int compare(Object o1, Object o2) {
 			int len1 = (o1 instanceof IntValue)? ((IntValue)o1).value : ((Object[])o1).length;
 			int len2 = (o2 instanceof IntValue)? ((IntValue)o2).value : ((Object[])o2).length;

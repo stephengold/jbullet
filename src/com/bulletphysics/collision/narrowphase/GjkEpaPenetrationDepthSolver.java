@@ -38,6 +38,7 @@ public class GjkEpaPenetrationDepthSolver extends ConvexPenetrationDepthSolver {
 
 	private GjkEpaSolver gjkEpaSolver = new GjkEpaSolver();
 
+        @Override
 	public boolean calcPenDepth(SimplexSolverInterface simplexSolver,
 												  ConvexShape pConvexA, ConvexShape pConvexB,
 												  Transform transformA, Transform transformB,

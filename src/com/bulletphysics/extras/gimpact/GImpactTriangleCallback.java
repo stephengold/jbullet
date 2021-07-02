@@ -44,6 +44,7 @@ class GImpactTriangleCallback extends TriangleCallback {
 	public boolean swapped;
 	public float margin;
 	
+        @Override
 	public void processTriangle(Vector3f[] triangle, int partId, int triangleIndex) {
 		TriangleShapeEx tri1 = new TriangleShapeEx(triangle[0], triangle[1], triangle[2]);
 		tri1.setMargin(margin);

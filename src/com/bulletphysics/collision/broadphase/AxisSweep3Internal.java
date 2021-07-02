@@ -372,6 +372,7 @@ public abstract class AxisSweep3Internal extends BroadphaseInterface {
 		return numHandles;
 	}
 
+        @Override
 	public void calculateOverlappingPairs(Dispatcher dispatcher) {
 		if (pairCache.hasDeferredRemoval()) {
 			ObjectArrayList<BroadphasePair> overlappingPairArray = pairCache.getOverlappingPairArray();
@@ -581,6 +582,7 @@ public abstract class AxisSweep3Internal extends BroadphaseInterface {
 	//public void processAllOverlappingPairs(OverlapCallback callback) {
 	//}
 	
+        @Override
 	public BroadphaseProxy createProxy(Vector3f aabbMin, Vector3f aabbMax, BroadphaseNativeType shapeType, Object userPtr, short collisionFilterGroup, short collisionFilterMask, Dispatcher dispatcher, Object multiSapProxy) {
 		int handleId = addHandle(aabbMin, aabbMax, userPtr, collisionFilterGroup, collisionFilterMask, dispatcher, multiSapProxy);
 
@@ -589,11 +591,13 @@ public abstract class AxisSweep3Internal extends BroadphaseInterface {
 		return handle;
 	}
 	
+        @Override
 	public void destroyProxy(BroadphaseProxy proxy, Dispatcher dispatcher) {
 		Handle handle = (Handle)proxy;
 		removeHandle(handle.uniqueId, dispatcher);
 	}
 
+        @Override
 	public void setAabb(BroadphaseProxy proxy, Vector3f aabbMin, Vector3f aabbMax, Dispatcher dispatcher) {
 		Handle handle = (Handle) proxy;
 		updateHandle(handle.uniqueId, aabbMin, aabbMax, dispatcher);
@@ -614,6 +618,7 @@ public abstract class AxisSweep3Internal extends BroadphaseInterface {
 		return true;
 	}
 
+        @Override
 	public OverlappingPairCache getOverlappingPairCache() {
 		return pairCache;
 	}
@@ -628,11 +633,13 @@ public abstract class AxisSweep3Internal extends BroadphaseInterface {
 	
 	// getAabb returns the axis aligned bounding box in the 'global' coordinate frame
 	// will add some transform later
+        @Override
 	public void getBroadphaseAabb(Vector3f aabbMin, Vector3f aabbMax) {
 		aabbMin.set(worldAabbMin);
 		aabbMax.set(worldAabbMax);
 	}
 
+        @Override
 	public void printStats() {
 		/*
 		printf("btAxisSweep3.h\n");

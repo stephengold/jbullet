@@ -199,6 +199,7 @@ public class OptimizedBvh implements Serializable {
 
 		private final Vector3f aabbMin = new Vector3f(), aabbMax = new Vector3f();
 		
+                @Override
 		public void internalProcessTriangleIndex(Vector3f[] triangle, int partId, int triangleIndex) {
 			OptimizedBvhNode node = new OptimizedBvhNode();
 			aabbMin.set(1e30f, 1e30f, 1e30f);
@@ -234,6 +235,7 @@ public class OptimizedBvh implements Serializable {
 			this.optimizedTree = tree;
 		}
 		
+                @Override
 		public void internalProcessTriangleIndex(Vector3f[] triangle, int partId, int triangleIndex) {
 			// The partId and triangle index must fit in the same (positive) integer
 			assert (partId < (1 << MAX_NUM_PARTS_IN_BITS));
