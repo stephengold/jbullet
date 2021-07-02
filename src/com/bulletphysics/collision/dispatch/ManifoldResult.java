@@ -76,6 +76,7 @@ public class ManifoldResult extends DiscreteCollisionDetectorInterface.Result {
 		this.manifoldPtr = manifoldPtr;
 	}
 
+        @Override
 	public void setShapeIdentifiers(int partId0, int index0, int partId1, int index1) {
 		this.partId0 = partId0;
 		this.partId1 = partId1;
@@ -83,6 +84,7 @@ public class ManifoldResult extends DiscreteCollisionDetectorInterface.Result {
 		this.index1 = index1;
 	}
 
+        @Override
 	public void addContactPoint(Vector3f normalOnBInWorld, Vector3f pointInWorld, float depth) {
 		assert (manifoldPtr != null);
 		//order in manifold needs to match

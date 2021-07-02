@@ -48,12 +48,16 @@ public abstract class ConvexShape extends CollisionShape {
 	
 	public abstract void getAabbSlow(Transform t, Vector3f aabbMin, Vector3f aabbMax);
 
+        @Override
 	public abstract void setLocalScaling(Vector3f scaling);
 
+        @Override
 	public abstract Vector3f getLocalScaling(Vector3f out);
 
+        @Override
 	public abstract void setMargin(float margin);
 
+        @Override
 	public abstract float getMargin();
 
 	public abstract int getNumPreferredPenetrationDirections();

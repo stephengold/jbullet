@@ -593,6 +593,7 @@ public class VoronoiSimplexSolver extends SimplexSolverInterface {
 	/**
 	 * Clear the simplex, remove all the vertices.
 	 */
+        @Override
 	public void reset() {
 		cachedValidClosest = false;
 		numVertices = 0;
@@ -601,6 +602,7 @@ public class VoronoiSimplexSolver extends SimplexSolverInterface {
 		cachedBC.reset();
 	}
 
+        @Override
 	public void addVertex(Vector3f w, Vector3f p, Vector3f q) {
 		lastW.set(w);
 		needsUpdate = true;
@@ -615,12 +617,14 @@ public class VoronoiSimplexSolver extends SimplexSolverInterface {
 	/**
 	 * Return/calculate the closest vertex.
 	 */
+        @Override
 	public boolean closest(Vector3f v) {
 		boolean succes = updateClosestVectorAndPoints();
 		v.set(cachedV);
 		return succes;
 	}
 
+        @Override
 	public float maxVertex() {
 		int i, numverts = numVertices();
 		float maxV = 0f;
@@ -633,10 +637,12 @@ public class VoronoiSimplexSolver extends SimplexSolverInterface {
 		return maxV;
 	}
 
+        @Override
 	public boolean fullSimplex() {
 		return (numVertices == 4);
 	}
 
+        @Override
 	public int getSimplex(Vector3f[] pBuf, Vector3f[] qBuf, Vector3f[] yBuf) {
 		for (int i = 0; i < numVertices(); i++) {
 			yBuf[i].set(simplexVectorW[i]);
@@ -646,6 +652,7 @@ public class VoronoiSimplexSolver extends SimplexSolverInterface {
 		return numVertices();
 	}
 
+        @Override
 	public boolean inSimplex(Vector3f w) {
 		boolean found = false;
 		int i, numverts = numVertices();
@@ -666,20 +673,24 @@ public class VoronoiSimplexSolver extends SimplexSolverInterface {
 		return found;
 	}
 
+        @Override
 	public void backup_closest(Vector3f v) {
 		v.set(cachedV);
 	}
 
+        @Override
 	public boolean emptySimplex() {
 		return (numVertices() == 0);
 	}
 
+        @Override
 	public void compute_points(Vector3f p1, Vector3f p2) {
 		updateClosestVectorAndPoints();
 		p1.set(cachedP1);
 		p2.set(cachedP2);
 	}
 
+        @Override
 	public int numVertices() {
 		return numVertices;
 	}

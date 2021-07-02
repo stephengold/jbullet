@@ -36,10 +36,12 @@ public abstract class ConcaveShape extends CollisionShape {
 
 	public abstract void processAllTriangles(TriangleCallback callback, Vector3f aabbMin, Vector3f aabbMax);
 
+        @Override
 	public float getMargin() {
 		return collisionMargin;
 	}
 
+        @Override
 	public void setMargin(float margin) {
 		this.collisionMargin = margin;
 	}

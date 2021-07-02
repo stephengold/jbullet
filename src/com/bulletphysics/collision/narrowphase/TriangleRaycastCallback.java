@@ -47,6 +47,7 @@ public abstract class TriangleRaycastCallback extends TriangleCallback {
 		this.hitFraction = 1f;
 	}
 	
+        @Override
 	public void processTriangle(Vector3f[] triangle, int partId, int triangleIndex) {
 		Vector3f vert0 = triangle[0];
 		Vector3f vert1 = triangle[1];

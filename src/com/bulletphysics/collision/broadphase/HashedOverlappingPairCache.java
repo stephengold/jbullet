@@ -58,6 +58,7 @@ public class HashedOverlappingPairCache extends OverlappingPairCache {
 	 * Add a pair and return the new pair. If the pair already exists,
 	 * no new pair is created and the old one is returned.
 	 */
+        @Override
 	public BroadphasePair addOverlappingPair(BroadphaseProxy proxy0, BroadphaseProxy proxy1) {
 		BulletStats.gAddedPairs++;
 
@@ -68,6 +69,7 @@ public class HashedOverlappingPairCache extends OverlappingPairCache {
 		return internalAddPair(proxy0,proxy1);
 	}
 
+        @Override
 	public Object removeOverlappingPair(BroadphaseProxy proxy0, BroadphaseProxy proxy1, Dispatcher dispatcher) {
 		BulletStats.gRemovePairs++;
 		if (proxy0.getUid() > proxy1.getUid()) {
@@ -198,6 +200,7 @@ public class HashedOverlappingPairCache extends OverlappingPairCache {
 		}
 	}
 
+        @Override
 	public void removeOverlappingPairsContainingProxy(BroadphaseProxy proxy, Dispatcher dispatcher) {
 		processAllOverlappingPairs(new RemovePairCallback(proxy), dispatcher);
 	}
@@ -411,6 +414,7 @@ public class HashedOverlappingPairCache extends OverlappingPairCache {
 		return overlappingPairArray.getQuick(index);
 	}
 
+        @Override
 	public void setInternalGhostPairCallback(OverlappingPairCallback ghostPairCallback) {
 		this.ghostPairCallback = ghostPairCallback;
 	}
@@ -424,6 +428,7 @@ public class HashedOverlappingPairCache extends OverlappingPairCache {
 			this.obsoleteProxy = obsoleteProxy;
 		}
 
+                @Override
 		public boolean processOverlap(BroadphasePair pair) {
 			return ((pair.pProxy0 == obsoleteProxy) ||
 					(pair.pProxy1 == obsoleteProxy));
@@ -441,6 +446,7 @@ public class HashedOverlappingPairCache extends OverlappingPairCache {
 			this.dispatcher = dispatcher;
 		}
 
+                @Override
 		public boolean processOverlap(BroadphasePair pair) {
 			if ((pair.pProxy0 == cleanProxy) ||
 					(pair.pProxy1 == cleanProxy)) {

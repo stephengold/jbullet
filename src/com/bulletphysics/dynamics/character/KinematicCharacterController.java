@@ -139,12 +139,14 @@ public class KinematicCharacterController extends ActionInterface {
 	}
 
 	// ActionInterface interface
+        @Override
 	public void updateAction(CollisionWorld collisionWorld, float deltaTime) {
 		preStep(collisionWorld);
 		playerStep(collisionWorld, deltaTime);
 	}
 
 	// ActionInterface interface
+        @Override
 	public void debugDraw(IDebugDraw debugDrawer) {
 	}
 

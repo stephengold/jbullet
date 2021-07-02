@@ -60,6 +60,7 @@ public abstract class StridingMeshInterface {
 		public final Vector3f aabbMin = new Vector3f(1e30f, 1e30f, 1e30f);
 		public final Vector3f aabbMax = new Vector3f(-1e30f, -1e30f, -1e30f);
 
+                @Override
 		public void internalProcessTriangleIndex(Vector3f[] triangle, int partId, int triangleIndex) {
 			VectorUtil.setMin(aabbMin, triangle[0]);
 			VectorUtil.setMax(aabbMax, triangle[0]);

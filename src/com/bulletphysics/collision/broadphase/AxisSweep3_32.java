@@ -61,6 +61,7 @@ public class AxisSweep3_32 extends AxisSweep3Internal {
 		return new HandleImpl();
 	}
 	
+        @Override
 	protected int getMask() {
 		return 0xFFFFFFFF;
 	}

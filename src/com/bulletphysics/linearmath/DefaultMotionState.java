@@ -69,12 +69,14 @@ public class DefaultMotionState extends MotionState {
 		this.startWorldTrans.set(startTrans);
 	}
 	
+        @Override
 	public Transform getWorldTransform(Transform out) {
 		out.inverse(centerOfMassOffset);
 		out.mul(graphicsWorldTrans);
 		return out;
 	}
 
+        @Override
 	public void setWorldTransform(Transform centerOfMassWorldTrans) {
 		graphicsWorldTrans.set(centerOfMassWorldTrans);
 		graphicsWorldTrans.mul(centerOfMassOffset);

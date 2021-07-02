@@ -106,6 +106,7 @@ class ConvexTriangleCallback extends TriangleCallback {
 	private CollisionAlgorithmConstructionInfo ci = new CollisionAlgorithmConstructionInfo();
 	private TriangleShape tm = new TriangleShape();
 	
+        @Override
 	public void processTriangle(Vector3f[] triangle, int partId, int triangleIndex) {
 		// just for debugging purposes
 		//printf("triangle %d",m_triangleCount++);

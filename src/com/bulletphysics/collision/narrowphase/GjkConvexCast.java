@@ -59,6 +59,7 @@ public class GjkConvexCast extends ConvexCast {
 		this.convexB = convexB;
 	}
 	
+        @Override
 	public boolean calcTimeOfImpact(Transform fromA, Transform toA, Transform fromB, Transform toB, CastResult result) {
 		simplexSolver.reset();
 
