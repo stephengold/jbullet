@@ -45,7 +45,7 @@ public class HullLibrary {
 
 	public final IntArrayList vertexIndexMapping = new IntArrayList();
 
-	final private ObjectArrayList<Tri> tris = new ObjectArrayList<Tri>();
+	final private ObjectArrayList<Tri> tris = new ObjectArrayList<>();
 	
 	/**
 	 * Converts point cloud to polygonal representation.
@@ -62,7 +62,7 @@ public class HullLibrary {
 		int vcount = desc.vcount;
 		if (vcount < 8) vcount = 8;
 		
-		ObjectArrayList<Vector3f> vertexSource = new ObjectArrayList<Vector3f>();
+		ObjectArrayList<Vector3f> vertexSource = new ObjectArrayList<>();
 		MiscUtil.resize(vertexSource, vcount, Vector3f.class);
 
 		Vector3f scale = Stack.alloc(Vector3f.class);
@@ -84,7 +84,7 @@ public class HullLibrary {
 
 			if (ok) {
 				// re-index triangle mesh so it refers to only used vertices, rebuild a new vertex table.
-				ObjectArrayList<Vector3f> vertexScratch = new ObjectArrayList<Vector3f>();
+				ObjectArrayList<Vector3f> vertexScratch = new ObjectArrayList<>();
 				MiscUtil.resize(vertexScratch, hr.vcount, Vector3f.class);
 
 				bringOutYourDead(hr.vertices, hr.vcount, vertexScratch, ovcount, hr.indices, hr.indexCount);

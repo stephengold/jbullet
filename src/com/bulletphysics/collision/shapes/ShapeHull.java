@@ -40,12 +40,12 @@ import javax.vecmath.Vector3f;
  */
 public class ShapeHull {
 
-	protected ObjectArrayList<Vector3f> vertices = new ObjectArrayList<Vector3f>();
+	protected ObjectArrayList<Vector3f> vertices = new ObjectArrayList<>();
 	protected IntArrayList indices = new IntArrayList();
 	protected int numIndices;
 	protected ConvexShape shape;
 
-	protected ObjectArrayList<Vector3f> unitSpherePoints = new ObjectArrayList<Vector3f>();
+	protected ObjectArrayList<Vector3f> unitSpherePoints = new ObjectArrayList<>();
 
 	public ShapeHull(ConvexShape shape) {
 		this.shape = shape;
@@ -74,7 +74,7 @@ public class ShapeHull {
 			}
 		}
 
-		ObjectArrayList<Vector3f> supportPoints = new ObjectArrayList<Vector3f>();
+		ObjectArrayList<Vector3f> supportPoints = new ObjectArrayList<>();
 		MiscUtil.resize(supportPoints, NUM_UNITSPHERE_POINTS + ConvexShape.MAX_PREFERRED_PENETRATION_DIRECTIONS * 2, Vector3f.class);
 
 		for (int i=0; i<numSampleDirections; i++) {

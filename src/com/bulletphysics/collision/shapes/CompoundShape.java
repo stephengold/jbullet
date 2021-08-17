@@ -42,7 +42,7 @@ import javax.vecmath.Vector3f;
  */
 public class CompoundShape extends CollisionShape {
 
-	private final ObjectArrayList<CompoundShapeChild> children = new ObjectArrayList<CompoundShapeChild>();
+	private final ObjectArrayList<CompoundShapeChild> children = new ObjectArrayList<>();
 	private final Vector3f localAabbMin = new Vector3f(1e30f, 1e30f, 1e30f);
 	private final Vector3f localAabbMax = new Vector3f(-1e30f, -1e30f, -1e30f);
 

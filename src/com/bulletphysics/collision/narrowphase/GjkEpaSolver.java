@@ -51,9 +51,9 @@ public class GjkEpaSolver {
 
 	protected final ArrayPool<float[]> floatArrays = ArrayPool.get(float.class);
 
-	protected final ObjectStackList<Mkv> stackMkv = new ObjectStackList<Mkv>(Mkv.class);
-	protected final ObjectStackList<He> stackHe = new ObjectStackList<He>(He.class);
-	protected final ObjectStackList<Face> stackFace = new ObjectStackList<Face>(Face.class);
+	protected final ObjectStackList<Mkv> stackMkv = new ObjectStackList<>(Mkv.class);
+	protected final ObjectStackList<He> stackHe = new ObjectStackList<>(He.class);
+	protected final ObjectStackList<Face> stackFace = new ObjectStackList<>(Face.class);
 
 	protected void pushStack() {
 		stackMkv.push();

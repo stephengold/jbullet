@@ -39,7 +39,7 @@ import javax.vecmath.Vector3f;
  */
 public class ConvexHullShape extends PolyhedralConvexShape {
 
-	private final ObjectArrayList<Vector3f> points = new ObjectArrayList<Vector3f>();
+	private final ObjectArrayList<Vector3f> points = new ObjectArrayList<>();
 	
 	/**
 	 * TODO: This constructor optionally takes in a pointer to points. Each point is assumed to be 3 consecutive float (x,y,z), the striding defines the number of bytes between each point, in memory.

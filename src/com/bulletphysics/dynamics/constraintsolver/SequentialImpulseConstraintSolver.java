@@ -75,9 +75,9 @@ public class SequentialImpulseConstraintSolver extends ConstraintSolver {
 	private final ObjectPool<SolverConstraint> constraintsPool = ObjectPool.get(SolverConstraint.class);
 	private final ObjectPool<JacobianEntry> jacobiansPool = ObjectPool.get(JacobianEntry.class);
 	
-	private final ObjectArrayList<SolverBody> tmpSolverBodyPool = new ObjectArrayList<SolverBody>();
-	private final ObjectArrayList<SolverConstraint> tmpSolverConstraintPool = new ObjectArrayList<SolverConstraint>();
-	private final ObjectArrayList<SolverConstraint> tmpSolverFrictionConstraintPool = new ObjectArrayList<SolverConstraint>();
+	private final ObjectArrayList<SolverBody> tmpSolverBodyPool = new ObjectArrayList<>();
+	private final ObjectArrayList<SolverConstraint> tmpSolverConstraintPool = new ObjectArrayList<>();
+	private final ObjectArrayList<SolverConstraint> tmpSolverFrictionConstraintPool = new ObjectArrayList<>();
 	private final IntArrayList orderTmpConstraintPool = new IntArrayList();
 	private final IntArrayList orderFrictionConstraintPool = new IntArrayList();
 	
