@@ -48,7 +48,7 @@ public class RaycastVehicle extends TypedConstraint {
 	
 	private final ArrayPool<float[]> floatArrays = ArrayPool.get(float.class);
 
-	private static RigidBody s_fixedObject = new RigidBody(0, null, null);
+	final private static RigidBody s_fixedObject = new RigidBody(0, null, null);
 	private static final float sideFrictionStiffness2 = 1.0f;
 	
 	protected ObjectArrayList<Vector3f> forwardWS = new ObjectArrayList<Vector3f>();
@@ -58,12 +58,12 @@ public class RaycastVehicle extends TypedConstraint {
 
 	private float tau;
 	private float damping;
-	private VehicleRaycaster vehicleRaycaster;
+	final private VehicleRaycaster vehicleRaycaster;
 	private float pitchControl = 0f;
 	private float steeringValue; 
 	private float currentVehicleSpeedKmHour;
 
-	private RigidBody chassisBody;
+	final private RigidBody chassisBody;
 
 	private int indexRightAxis = 0;
 	private int indexUpAxis = 2;

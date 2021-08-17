@@ -62,8 +62,8 @@ public class OptimizedBvh implements Serializable {
 	private final ObjectArrayList<OptimizedBvhNode> leafNodes = new ObjectArrayList<OptimizedBvhNode>();
 	private final ObjectArrayList<OptimizedBvhNode> contiguousNodes = new ObjectArrayList<OptimizedBvhNode>();
 
-	private QuantizedBvhNodes quantizedLeafNodes = new QuantizedBvhNodes();
-	private QuantizedBvhNodes quantizedContiguousNodes = new QuantizedBvhNodes();
+	final private QuantizedBvhNodes quantizedLeafNodes = new QuantizedBvhNodes();
+	final private QuantizedBvhNodes quantizedContiguousNodes = new QuantizedBvhNodes();
 	
 	private int curNodeIndex;
 

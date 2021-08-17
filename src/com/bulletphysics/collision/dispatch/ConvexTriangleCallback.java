@@ -45,15 +45,15 @@ class ConvexTriangleCallback extends TriangleCallback {
 
 	//protected final BulletStack stack = BulletStack.get();
 	
-	private CollisionObject convexBody;
-	private CollisionObject triBody;
+	final private CollisionObject convexBody;
+	final private CollisionObject triBody;
 
 	private final Vector3f aabbMin = new Vector3f();
 	private final Vector3f aabbMax = new Vector3f();
 
 	private ManifoldResult resultOut;
 
-	private Dispatcher dispatcher;
+	final private Dispatcher dispatcher;
 	private DispatcherInfo dispatchInfoPtr;
 	private float collisionMarginTriangle;
 	
@@ -103,8 +103,8 @@ class ConvexTriangleCallback extends TriangleCallback {
 		aabbMin.sub(extra);
 	}
 
-	private CollisionAlgorithmConstructionInfo ci = new CollisionAlgorithmConstructionInfo();
-	private TriangleShape tm = new TriangleShape();
+	final private CollisionAlgorithmConstructionInfo ci = new CollisionAlgorithmConstructionInfo();
+	final private TriangleShape tm = new TriangleShape();
 	
         @Override
 	public void processTriangle(Vector3f[] triangle, int partId, int triangleIndex) {

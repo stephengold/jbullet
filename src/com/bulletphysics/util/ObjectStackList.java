@@ -30,7 +30,7 @@ package com.bulletphysics.util;
  */
 public class ObjectStackList<T> extends StackList<T> {
 
-	private Class<T> cls;
+	final private Class<T> cls;
 	
 	public ObjectStackList(Class<T> cls) {
 		super(false);

@@ -43,7 +43,7 @@ class Tri extends Int3 {
 
 	private static int er = -1;
 	
-	private static IntRef erRef = new IntRef() {
+	final private static IntRef erRef = new IntRef() {
 		@Override
 		public int get() {
 			return er;

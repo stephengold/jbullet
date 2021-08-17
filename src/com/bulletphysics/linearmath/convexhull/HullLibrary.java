@@ -45,7 +45,7 @@ public class HullLibrary {
 
 	public final IntArrayList vertexIndexMapping = new IntArrayList();
 
-	private ObjectArrayList<Tri> tris = new ObjectArrayList<Tri>();
+	final private ObjectArrayList<Tri> tris = new ObjectArrayList<Tri>();
 	
 	/**
 	 * Converts point cloud to polygonal representation.

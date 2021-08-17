@@ -36,10 +36,10 @@ import java.util.Map;
  */
 public class ArrayPool<T> {
 
-	private Class componentType;
-	private ObjectArrayList list = new ObjectArrayList();
+	final private Class componentType;
+	final private ObjectArrayList list = new ObjectArrayList();
 	private Comparator comparator;
-	private IntValue key = new IntValue();
+	final private IntValue key = new IntValue();
 	
 	/**
 	 * Creates object pool.
@@ -163,7 +163,7 @@ public class ArrayPool<T> {
 	
 	////////////////////////////////////////////////////////////////////////////
 	
-	private static ThreadLocal<Map> threadLocal = new ThreadLocal<Map>() {
+	final private static ThreadLocal<Map> threadLocal = new ThreadLocal<Map>() {
 		@Override
 		protected Map initialValue() {
 			return new HashMap();

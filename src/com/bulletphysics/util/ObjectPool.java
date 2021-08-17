@@ -33,8 +33,8 @@ import java.util.Map;
  */
 public class ObjectPool<T> {
 	
-	private Class<T> cls;
-	private ObjectArrayList<T> list = new ObjectArrayList<T>();
+	final private Class<T> cls;
+	final private ObjectArrayList<T> list = new ObjectArrayList<T>();
 	
 	public ObjectPool(Class<T> cls) {
 		this.cls = cls;
@@ -74,7 +74,7 @@ public class ObjectPool<T> {
 	
 	////////////////////////////////////////////////////////////////////////////
 	
-	private static ThreadLocal<Map> threadLocal = new ThreadLocal<Map>() {
+	final private static ThreadLocal<Map> threadLocal = new ThreadLocal<Map>() {
 		@Override
 		protected Map initialValue() {
 			return new HashMap();

@@ -51,7 +51,7 @@ public abstract class StackList<T> {
 	private final ObjectArrayList<T> list = new ObjectArrayList<T>();
 	private T returnObj;
 	
-	private int[] stack = new int[512];
+	final private int[] stack = new int[512];
 	private int stackCount = 0;
 	
 	private int pos = 0;

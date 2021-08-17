@@ -618,8 +618,8 @@ public class DiscreteDynamicsWorld extends DynamicsWorld {
 		}
 	}
 
-	private ObjectArrayList<TypedConstraint> sortedConstraints = new ObjectArrayList<TypedConstraint>();
-	private InplaceSolverIslandCallback solverCallback = new InplaceSolverIslandCallback();
+	final private ObjectArrayList<TypedConstraint> sortedConstraints = new ObjectArrayList<TypedConstraint>();
+	final private InplaceSolverIslandCallback solverCallback = new InplaceSolverIslandCallback();
 	
 	protected void solveConstraints(ContactSolverInfo solverInfo) {
 		BulletStats.pushProfile("solveConstraints");
@@ -1115,10 +1115,10 @@ public class DiscreteDynamicsWorld extends DynamicsWorld {
 //	}
 
 	private static class ClosestNotMeConvexResultCallback extends ClosestConvexResultCallback {
-		private CollisionObject me;
-		private float allowedPenetration = 0f;
-		private OverlappingPairCache pairCache;
-		private Dispatcher dispatcher;
+		final private CollisionObject me;
+		final private float allowedPenetration = 0f;
+		final private OverlappingPairCache pairCache;
+		final private Dispatcher dispatcher;
 
 		public ClosestNotMeConvexResultCallback(CollisionObject me, Vector3f fromA, Vector3f toA, OverlappingPairCache pairCache, Dispatcher dispatcher) {
 			super(fromA, toA);

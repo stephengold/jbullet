@@ -39,7 +39,7 @@ public class TriangleIndexVertexArray extends StridingMeshInterface {
 
 	protected ObjectArrayList<IndexedMesh> indexedMeshes = new ObjectArrayList<IndexedMesh>();
 
-	private ByteBufferVertexData data = new ByteBufferVertexData();
+	final private ByteBufferVertexData data = new ByteBufferVertexData();
 
 	public TriangleIndexVertexArray() {
 	}
