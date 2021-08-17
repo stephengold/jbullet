@@ -51,8 +51,8 @@ public class RaycastVehicle extends TypedConstraint {
 	final private static RigidBody s_fixedObject = new RigidBody(0, null, null);
 	private static final float sideFrictionStiffness2 = 1.0f;
 	
-	protected ObjectArrayList<Vector3f> forwardWS = new ObjectArrayList<Vector3f>();
-	protected ObjectArrayList<Vector3f> axle = new ObjectArrayList<Vector3f>();
+	protected ObjectArrayList<Vector3f> forwardWS = new ObjectArrayList<>();
+	protected ObjectArrayList<Vector3f> axle = new ObjectArrayList<>();
 	protected FloatArrayList forwardImpulse = new FloatArrayList();
 	protected FloatArrayList sideImpulse = new FloatArrayList();
 
@@ -69,7 +69,7 @@ public class RaycastVehicle extends TypedConstraint {
 	private int indexUpAxis = 2;
 	private int indexForwardAxis = 1;
 	
-	public ObjectArrayList<WheelInfo> wheelInfo = new ObjectArrayList<WheelInfo>();
+	public ObjectArrayList<WheelInfo> wheelInfo = new ObjectArrayList<>();
 
 	// constructor to create a car from an existing rigidbody
 	public RaycastVehicle(VehicleTuning tuning, RigidBody chassis, VehicleRaycaster raycaster) {

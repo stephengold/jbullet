@@ -98,7 +98,7 @@ public class RigidBody extends CollisionObject {
 	private MotionState optionalMotionState;
 
 	// keep track of typed constraints referencing this rigid body
-	private final ObjectArrayList<TypedConstraint> constraintRefs = new ObjectArrayList<TypedConstraint>();
+	private final ObjectArrayList<TypedConstraint> constraintRefs = new ObjectArrayList<>();
 
 	// for experimental overriding of friction/contact solver func
 	public int contactSolverType;

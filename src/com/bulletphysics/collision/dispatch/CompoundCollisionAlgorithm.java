@@ -42,7 +42,7 @@ import cz.advel.stack.Stack;
  */
 public class CompoundCollisionAlgorithm extends CollisionAlgorithm {
 
-	private final ObjectArrayList<CollisionAlgorithm> childCollisionAlgorithms = new ObjectArrayList<CollisionAlgorithm>();
+	private final ObjectArrayList<CollisionAlgorithm> childCollisionAlgorithms = new ObjectArrayList<>();
 	private boolean isSwapped;
 	
 	public void init(CollisionAlgorithmConstructionInfo ci, CollisionObject body0, CollisionObject body1, boolean isSwapped) {

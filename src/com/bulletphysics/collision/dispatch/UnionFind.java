@@ -37,7 +37,7 @@ public class UnionFind {
 	
 	// Optimization: could use short ints instead of ints (halving memory, would limit the number of rigid bodies to 64k, sounds reasonable).
 
-	private final ObjectArrayList<Element> elements = new ObjectArrayList<Element>();
+	private final ObjectArrayList<Element> elements = new ObjectArrayList<>();
 	
 	/**
 	 * This is a special operation, destroying the content of UnionFind.

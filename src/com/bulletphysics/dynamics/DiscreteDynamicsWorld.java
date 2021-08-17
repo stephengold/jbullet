@@ -70,7 +70,7 @@ public class DiscreteDynamicsWorld extends DynamicsWorld {
 
 	protected ConstraintSolver constraintSolver;
 	protected SimulationIslandManager islandManager;
-	protected final ObjectArrayList<TypedConstraint> constraints = new ObjectArrayList<TypedConstraint>();
+	protected final ObjectArrayList<TypedConstraint> constraints = new ObjectArrayList<>();
 	protected final Vector3f gravity = new Vector3f(0f, -10f, 0f);
 
 	//for variable timesteps
@@ -80,9 +80,9 @@ public class DiscreteDynamicsWorld extends DynamicsWorld {
 	protected boolean ownsIslandManager;
 	protected boolean ownsConstraintSolver;
 
-	protected ObjectArrayList<RaycastVehicle> vehicles = new ObjectArrayList<RaycastVehicle>();
+	protected ObjectArrayList<RaycastVehicle> vehicles = new ObjectArrayList<>();
 	
-	protected ObjectArrayList<ActionInterface> actions = new ObjectArrayList<ActionInterface>();
+	protected ObjectArrayList<ActionInterface> actions = new ObjectArrayList<>();
 
 	protected int profileTimings = 0;
 
@@ -618,7 +618,7 @@ public class DiscreteDynamicsWorld extends DynamicsWorld {
 		}
 	}
 
-	final private ObjectArrayList<TypedConstraint> sortedConstraints = new ObjectArrayList<TypedConstraint>();
+	final private ObjectArrayList<TypedConstraint> sortedConstraints = new ObjectArrayList<>();
 	final private InplaceSolverIslandCallback solverCallback = new InplaceSolverIslandCallback();
 	
 	protected void solveConstraints(ContactSolverInfo solverInfo) {
@@ -1164,7 +1164,7 @@ public class DiscreteDynamicsWorld extends DynamicsWorld {
 			// call needsResponse, see http://code.google.com/p/bullet/issues/detail?id=179
 			if (dispatcher.needsResponse(me, otherObj)) {
 				// don't do CCD when there are already contact points (touching contact/penetration)
-				ObjectArrayList<PersistentManifold> manifoldArray = new ObjectArrayList<PersistentManifold>();
+				ObjectArrayList<PersistentManifold> manifoldArray = new ObjectArrayList<>();
 				BroadphasePair collisionPair = pairCache.findPair(me.getBroadphaseHandle(), proxy0);
 				if (collisionPair != null) {
 					if (collisionPair.algorithm != null) {
