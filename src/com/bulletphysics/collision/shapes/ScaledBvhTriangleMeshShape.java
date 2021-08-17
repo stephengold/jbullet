@@ -153,9 +153,9 @@ public class ScaledBvhTriangleMeshShape extends ConcaveShape {
 	////////////////////////////////////////////////////////////////////////////
 
 	private static class ScaledTriangleCallback extends TriangleCallback {
-		private TriangleCallback originalCallback;
-		private Vector3f localScaling;
-		private Vector3f[] newTriangle = new Vector3f[3];
+		final private TriangleCallback originalCallback;
+		final private Vector3f localScaling;
+		final private Vector3f[] newTriangle = new Vector3f[3];
 
 		public ScaledTriangleCallback(TriangleCallback originalCallback, Vector3f localScaling) {
 			this.originalCallback = originalCallback;

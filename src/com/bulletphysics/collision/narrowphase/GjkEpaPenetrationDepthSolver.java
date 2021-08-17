@@ -36,7 +36,7 @@ import javax.vecmath.Vector3f;
  */
 public class GjkEpaPenetrationDepthSolver extends ConvexPenetrationDepthSolver {
 
-	private GjkEpaSolver gjkEpaSolver = new GjkEpaSolver();
+	final private GjkEpaSolver gjkEpaSolver = new GjkEpaSolver();
 
         @Override
 	public boolean calcPenDepth(SimplexSolverInterface simplexSolver,

@@ -43,7 +43,7 @@ import javax.vecmath.Vector3f;
  */
 public class ConeTwistConstraint extends TypedConstraint {
 
-	private JacobianEntry[] jac/*[3]*/ = new JacobianEntry[] { new JacobianEntry(), new JacobianEntry(), new JacobianEntry() }; //3 orthogonal linear constraints
+	final private JacobianEntry[] jac/*[3]*/ = new JacobianEntry[] { new JacobianEntry(), new JacobianEntry(), new JacobianEntry() }; //3 orthogonal linear constraints
 
 	private final Transform rbAFrame = new Transform();
 	private final Transform rbBFrame = new Transform();

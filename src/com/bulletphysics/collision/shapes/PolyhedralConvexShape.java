@@ -36,7 +36,7 @@ import javax.vecmath.Vector3f;
  */
 public abstract class PolyhedralConvexShape extends ConvexInternalShape {
 
-	private static Vector3f[] _directions = new Vector3f[] {
+	final private static Vector3f[] _directions = new Vector3f[] {
 		new Vector3f( 1f,  0f,  0f),
 		new Vector3f( 0f,  1f,  0f),
 		new Vector3f( 0f,  0f,  1f),
@@ -45,7 +45,7 @@ public abstract class PolyhedralConvexShape extends ConvexInternalShape {
 		new Vector3f( 0f,  0f, -1f)
 	};
 
-	private static Vector3f[] _supporting = new Vector3f[] {
+	final private static Vector3f[] _supporting = new Vector3f[] {
 		new Vector3f(0f, 0f, 0f),
 		new Vector3f(0f, 0f, 0f),
 		new Vector3f(0f, 0f, 0f),

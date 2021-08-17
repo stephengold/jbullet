@@ -49,7 +49,7 @@ public class BulletGlobals {
 
 	////////////////////////////////////////////////////////////////////////////
 
-	private static ThreadLocal<BulletGlobals> threadLocal = new ThreadLocal<BulletGlobals>() {
+	final private static ThreadLocal<BulletGlobals> threadLocal = new ThreadLocal<BulletGlobals>() {
 		@Override
 		protected BulletGlobals initialValue() {
 			return new BulletGlobals();

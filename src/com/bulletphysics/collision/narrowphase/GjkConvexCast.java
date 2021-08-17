@@ -47,11 +47,11 @@ public class GjkConvexCast extends ConvexCast {
 	private static final int MAX_ITERATIONS = 32;
 //#endif
 	
-	private SimplexSolverInterface simplexSolver;
-	private ConvexShape convexA;
-	private ConvexShape convexB;
+	final private SimplexSolverInterface simplexSolver;
+	final private ConvexShape convexA;
+	final private ConvexShape convexB;
 	
-	private GjkPairDetector gjk = new GjkPairDetector();
+	final private GjkPairDetector gjk = new GjkPairDetector();
 
 	public GjkConvexCast(ConvexShape convexA, ConvexShape convexB, SimplexSolverInterface simplexSolver) {
 		this.simplexSolver = simplexSolver;

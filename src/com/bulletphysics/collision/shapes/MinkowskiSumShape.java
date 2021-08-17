@@ -39,8 +39,8 @@ public class MinkowskiSumShape extends ConvexInternalShape {
 
 	private final Transform transA = new Transform();
 	private final Transform transB = new Transform();
-	private ConvexShape shapeA;
-	private ConvexShape shapeB;
+	final private ConvexShape shapeA;
+	final private ConvexShape shapeB;
 
 	public MinkowskiSumShape(ConvexShape shapeA, ConvexShape shapeB) {
 		this.shapeA = shapeA;

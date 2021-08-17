@@ -72,7 +72,7 @@ public class GImpactCollisionAlgorithm extends CollisionAlgorithm {
 	protected int triface1;
 	protected int part1;
 
-	private PairSet tmpPairset = new PairSet();
+	final private PairSet tmpPairset = new PairSet();
 	
 	public void init(CollisionAlgorithmConstructionInfo ci, CollisionObject body0, CollisionObject body1) {
 		super.init(ci);

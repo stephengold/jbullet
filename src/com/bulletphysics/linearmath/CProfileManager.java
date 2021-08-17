@@ -40,7 +40,7 @@ import com.bulletphysics.BulletStats;
  */
 public class CProfileManager {
 
-	private static CProfileNode root = new CProfileNode("Root", null);
+	final private static CProfileNode root = new CProfileNode("Root", null);
 	private static CProfileNode currentNode = root;
 	private static int frameCounter = 0;
 	private static long resetTime = 0;

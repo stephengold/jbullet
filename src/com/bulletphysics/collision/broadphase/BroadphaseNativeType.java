@@ -82,7 +82,7 @@ public enum BroadphaseNativeType {
 	
 	MAX_BROADPHASE_COLLISION_TYPES;
 	
-	private static BroadphaseNativeType[] values = values();
+	final private static BroadphaseNativeType[] values = values();
 	
 	public static BroadphaseNativeType forValue(int value) {
 		return values[value];

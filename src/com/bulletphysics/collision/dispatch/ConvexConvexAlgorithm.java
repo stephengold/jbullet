@@ -52,7 +52,7 @@ public class ConvexConvexAlgorithm extends CollisionAlgorithm {
 	
 	protected final ObjectPool<ClosestPointInput> pointInputsPool = ObjectPool.get(ClosestPointInput.class);
 
-	private GjkPairDetector gjkPairDetector = new GjkPairDetector();
+	final private GjkPairDetector gjkPairDetector = new GjkPairDetector();
 
 	public boolean ownManifold;
 	public PersistentManifold manifoldPtr;
@@ -134,7 +134,7 @@ public class ConvexConvexAlgorithm extends CollisionAlgorithm {
 		}
 	}
 
-	private static boolean disableCcd = false;
+	final private static boolean disableCcd = false;
 	
 	@Override
 	public float calculateTimeOfImpact(CollisionObject col0, CollisionObject col1, DispatcherInfo dispatchInfo, ManifoldResult resultOut) {

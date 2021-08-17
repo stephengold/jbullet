@@ -53,9 +53,9 @@ public class SubsimplexConvexCast extends ConvexCast {
 	
 	private static final int MAX_ITERATIONS = 32;
 	
-	private SimplexSolverInterface simplexSolver;
-	private ConvexShape convexA;
-	private ConvexShape convexB;
+	final private SimplexSolverInterface simplexSolver;
+	final private ConvexShape convexA;
+	final private ConvexShape convexB;
 
 	public SubsimplexConvexCast(ConvexShape shapeA, ConvexShape shapeB, SimplexSolverInterface simplexSolver) {
 		this.convexA = shapeA;

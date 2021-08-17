@@ -138,9 +138,9 @@ public class ShapeHull {
 
 	////////////////////////////////////////////////////////////////////////////
 	
-	private static int NUM_UNITSPHERE_POINTS = 42;
+	final private static int NUM_UNITSPHERE_POINTS = 42;
 	
-	private static ObjectArrayList<Vector3f> constUnitSpherePoints = new ObjectArrayList<Vector3f>();
+	final private static ObjectArrayList<Vector3f> constUnitSpherePoints = new ObjectArrayList<Vector3f>();
 	
 	static {
 		constUnitSpherePoints.add(new Vector3f(0.000000f, -0.000000f, -1.000000f));

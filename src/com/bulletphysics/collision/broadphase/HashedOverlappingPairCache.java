@@ -40,12 +40,12 @@ public class HashedOverlappingPairCache extends OverlappingPairCache {
 	
 	private static final int NULL_PAIR = 0xffffffff;
 	
-	private ObjectArrayList<BroadphasePair> overlappingPairArray = new ObjectArrayList<BroadphasePair>();
+	final private ObjectArrayList<BroadphasePair> overlappingPairArray = new ObjectArrayList<BroadphasePair>();
 	private OverlapFilterCallback overlapFilterCallback;
-	private boolean blockedForChanges = false;
+	final private boolean blockedForChanges = false;
 	
-	private IntArrayList hashTable = new IntArrayList();
-	private IntArrayList next = new IntArrayList();
+	final private IntArrayList hashTable = new IntArrayList();
+	final private IntArrayList next = new IntArrayList();
 	protected OverlappingPairCallback ghostPairCallback;
 
 	public HashedOverlappingPairCache() {
@@ -422,7 +422,7 @@ public class HashedOverlappingPairCache extends OverlappingPairCache {
 	////////////////////////////////////////////////////////////////////////////
 
 	private static class RemovePairCallback extends OverlapCallback {
-		private BroadphaseProxy obsoleteProxy;
+		final private BroadphaseProxy obsoleteProxy;
 
 		public RemovePairCallback(BroadphaseProxy obsoleteProxy) {
 			this.obsoleteProxy = obsoleteProxy;
@@ -436,9 +436,9 @@ public class HashedOverlappingPairCache extends OverlappingPairCache {
 	}
 
 	private static class CleanPairCallback extends OverlapCallback {
-		private BroadphaseProxy cleanProxy;
-		private OverlappingPairCache pairCache;
-		private Dispatcher dispatcher;
+		final private BroadphaseProxy cleanProxy;
+		final private OverlappingPairCache pairCache;
+		final private Dispatcher dispatcher;
 
 		public CleanPairCallback(BroadphaseProxy cleanProxy, OverlappingPairCache pairCache, Dispatcher dispatcher) {
 			this.cleanProxy = cleanProxy;

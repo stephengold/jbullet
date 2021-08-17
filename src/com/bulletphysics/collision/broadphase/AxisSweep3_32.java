@@ -67,8 +67,8 @@ public class AxisSweep3_32 extends AxisSweep3Internal {
 	}
 	
 	protected static class EdgeArrayImpl extends EdgeArray {
-		private int[] pos;
-		private int[] handle;
+		final private int[] pos;
+		final private int[] handle;
 
 		public EdgeArrayImpl(int size) {
 			pos = new int[size];

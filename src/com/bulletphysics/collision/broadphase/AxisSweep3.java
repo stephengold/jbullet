@@ -70,8 +70,8 @@ public class AxisSweep3 extends AxisSweep3Internal {
 	}
 	
 	protected static class EdgeArrayImpl extends EdgeArray {
-		private short[] pos;
-		private short[] handle;
+		final private short[] pos;
+		final private short[] handle;
 
 		public EdgeArrayImpl(int size) {
 			pos = new short[size];

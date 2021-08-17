@@ -37,8 +37,8 @@ import javax.vecmath.Vector3f;
  */
 public class UniformScalingShape extends ConvexShape {
 
-	private ConvexShape childConvexShape;
-	private float uniformScalingFactor;
+	final private ConvexShape childConvexShape;
+	final private float uniformScalingFactor;
 
 	public UniformScalingShape(ConvexShape convexChildShape, float uniformScalingFactor) {
 		this.childConvexShape = convexChildShape;

@@ -39,10 +39,10 @@ import javax.vecmath.Vector3f;
  */
 public class ConeShape extends ConvexInternalShape {
 
-	private float sinAngle;
-	private float radius;
-	private float height;
-	private int[] coneIndices = new int[3];
+	final private float sinAngle;
+	final private float radius;
+	final private float height;
+	final private int[] coneIndices = new int[3];
 
 	public ConeShape(float radius, float height) {
 		this.radius = radius;
