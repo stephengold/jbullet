@@ -13,6 +13,7 @@ ext {
     artifact = 'jbullet'
     version = jbulletVersion
     baseName = "${artifact}-${version}"
+    websiteUrl = 'https://github.com/stephengold/jbullet'
 }
 
 dependencies {
@@ -85,9 +86,9 @@ publishing {
                 scm {
                     connection = 'scm:git:git://github.com/stephengold/jbullet.git'
                     developerConnection = 'scm:git:ssh://github.com:stephengold/jbullet.git'
-                    url = 'https://github.com/stephengold/jbullet/tree/master'
+                    url = project.ext.websiteUrl + '/tree/master'
                 }
-                url = 'https://github.com/stephengold/jbullet'
+                url = project.ext.websiteUrl
             }
             version project.ext.version
         }
