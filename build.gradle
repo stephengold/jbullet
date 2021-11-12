@@ -1,13 +1,9 @@
+// Gradle build script for the jbullet project
+
 plugins {
-    id 'base' // To add "clean" task to the root project.
+    id 'base' // to add "clean" task to the root project
 }
 
 subprojects {
     apply from: rootProject.file('common.gradle')
-}
-
-// publishing tasks
-
-task('publishToMavenLocal') {
-    dependsOn ':JBulletLibrary:publishToMavenLocal'
 }
