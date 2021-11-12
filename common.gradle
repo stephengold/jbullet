@@ -1,9 +1,9 @@
-// Gradle settings and tasks common to all subprojects
+// Gradle settings and tasks common to all jbullet subprojects
 
 apply plugin: 'java'
 
 group = 'com.github.stephengold'
-ext { // current versions of various libraries
+ext { // current versions of various libraries:
     jbulletVersion = '1.0.1'
     vecmathVersion = '1.5.2'
 }
