@@ -14,9 +14,6 @@ ext {
     baseName = "${artifact}-${version}"
 }
 
-javadocJar { archiveBaseName = project.ext.baseName }
-sourcesJar { archiveBaseName = project.ext.baseName }
-
 dependencies {
     implementation 'com.github.stephengold:stack-alloc:1.0.1'
     implementation 'javax.vecmath:vecmath:1.5.2'
@@ -33,7 +30,20 @@ javadoc {
     }
 }
 
-// publishing tasks
+task javadocJar(type: Jar) {
+    archiveBaseName = project.ext.baseName
+    archiveClassifier = 'javadoc'
+    dependsOn 'javadoc'
+    description 'Create a JAR of javadoc.'
+    from javadoc.destinationDir
+}
+task sourcesJar(type: Jar) {
+    archiveBaseName = project.ext.baseName
+    archiveClassifier = 'sources'
+    description 'Create a JAR of source files.'
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from sourceSets.main.allJava
+}
 
 build.dependsOn('javadocJar', 'pom', 'sourcesJar')
 task('pom', type: Copy) {
