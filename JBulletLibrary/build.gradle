@@ -53,7 +53,7 @@ task('pom', type: Copy) {
     description 'Copies the Maven POM to build/libs.'
     from "${buildDir}/publications/maven/pom-default.xml"
     into "${buildDir}/libs"
-    rename 'pom-default.xml', baseName + '.pom'
+    rename 'pom-default.xml', project.ext.baseName + '.pom'
 }
 
 publishing {
