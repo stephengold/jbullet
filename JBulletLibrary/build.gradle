@@ -36,13 +36,13 @@ task javadocJar(type: Jar) {
     archiveBaseName = project.ext.baseName
     archiveClassifier = 'javadoc'
     dependsOn 'javadoc'
-    description 'Create a JAR of javadoc.'
+    description 'Creates a JAR of javadoc.'
     from javadoc.destinationDir
 }
 task sourcesJar(type: Jar) {
     archiveBaseName = project.ext.baseName
     archiveClassifier = 'sources'
-    description 'Create a JAR of source files.'
+    description 'Creates a JAR of sourcecode.'
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     from sourceSets.main.allJava
 }
@@ -50,6 +50,7 @@ task sourcesJar(type: Jar) {
 build.dependsOn('javadocJar', 'pom', 'sourcesJar')
 task('pom', type: Copy) {
     dependsOn 'generatePomFileForMavenPublication'
+    description 'Copies the Maven POM to build/libs.'
     from "${buildDir}/publications/maven/pom-default.xml"
     into "${buildDir}/libs"
     rename 'pom-default.xml', baseName + '.pom'
