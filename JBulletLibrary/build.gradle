@@ -56,10 +56,6 @@ task('pom', type: Copy) {
     rename 'pom-default.xml', baseName + '.pom'
 }
 
-publishToMavenLocal.doLast {
-    println 'published to ' + baseName
-}
-
 publishing {
     publications {
         maven(MavenPublication) {
@@ -106,3 +102,6 @@ publishing {
     }
 }
 generateMetadataFileForMavenPublication.dependsOn('pom')
+publishMavenPublicationToMavenLocal.doLast {
+    println 'installed locally as ' + project.ext.baseName
+}
