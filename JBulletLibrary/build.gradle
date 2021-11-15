@@ -17,7 +17,11 @@ ext {
 }
 
 dependencies {
-    implementation 'com.github.stephengold:stack-alloc:1.0.2'
+    implementation ('com.github.stephengold:stack-alloc:1.0.2') {
+        exclude group: 'com.github.stephengold', module: 'asm-all'
+        exclude group: 'org.apache.ant', module: 'ant'
+        exclude group: 'org.apache.ant', module: 'ant-launcher'
+    }
     implementation 'javax.vecmath:vecmath:1.5.2'
 }
 
