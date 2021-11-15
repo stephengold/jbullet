@@ -4,7 +4,7 @@ apply plugin: 'java'
 
 group = 'com.github.stephengold'
 ext { // current versions of various libraries:
-    jbulletVersion = '1.0.1'
+    jbulletVersion = '1.0.2'
     vecmathVersion = '1.5.2'
 }
 
