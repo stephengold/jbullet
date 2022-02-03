@@ -51,7 +51,14 @@ task sourcesJar(type: Jar) {
     from sourceSets.main.allJava
 }
 
-build.dependsOn('javadocJar', 'pom', 'sourcesJar')
+build.dependsOn('module', 'javadocJar', 'pom', 'sourcesJar')
+task('module', type: Copy) {
+    dependsOn 'generateMetadataFileForMavenPublication'
+    description 'Copies the module metadata to build/libs.'
+    from "${buildDir}/publications/maven/module.json"
+    into "${buildDir}/libs"
+    rename 'module.json', project.ext.baseName + '.module'
+}
 task('pom', type: Copy) {
     dependsOn 'generatePomFileForMavenPublication'
     description 'Copies the Maven POM to build/libs.'
@@ -108,3 +115,4 @@ publishing {
         }
     }
 }
+generateMetadataFileForMavenPublication.dependsOn('pom')
