@@ -94,6 +94,9 @@ publishing {
             version project.ext.version
         }
     }
+    // Staging to OSSRH relies on the existence of 2 properties
+    // (ossrhUsername and ossrhPassword)
+    // which should be stored in ~/.gradle/gradle.properties
     repositories {
         maven {
             credentials {
