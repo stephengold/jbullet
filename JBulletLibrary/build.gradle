@@ -7,7 +7,6 @@ plugins {
     id 'maven-publish'
 }
 
-description = 'A Java port of the Bullet Physics Library'
 ext {
     group = 'com.github.stephengold'
     artifact = 'jbullet'
