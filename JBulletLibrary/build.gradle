@@ -35,14 +35,14 @@ javadoc {
     }
 }
 
-task javadocJar(type: Jar) {
+tasks.register('javadocJar', Jar) {
     archiveBaseName = project.ext.baseName
     archiveClassifier = 'javadoc'
     dependsOn 'javadoc'
     description 'Creates a JAR of javadoc.'
     from javadoc.destinationDir
 }
-task sourcesJar(type: Jar) {
+tasks.register('sourcesJar', Jar) {
     archiveBaseName = project.ext.baseName
     archiveClassifier = 'sources'
     description 'Creates a JAR of sourcecode.'
@@ -51,14 +51,14 @@ task sourcesJar(type: Jar) {
 }
 
 build.dependsOn('module', 'javadocJar', 'pom', 'sourcesJar')
-task('module', type: Copy) {
+tasks.register('module', Copy) {
     dependsOn 'generateMetadataFileForMavenPublication'
     description 'Copies the module metadata to build/libs.'
     from "${buildDir}/publications/maven/module.json"
     into "${buildDir}/libs"
     rename 'module.json', project.ext.baseName + '.module'
 }
-task('pom', type: Copy) {
+tasks.register('pom', Copy) {
     dependsOn 'generatePomFileForMavenPublication'
     description 'Copies the Maven POM to build/libs.'
     from "${buildDir}/publications/maven/pom-default.xml"
