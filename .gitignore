@@ -1,5 +1,6 @@
 /.gradle/
 /.nb-gradle/
+/JBulletLibrary/build/
 /build/
 /dist/
 /nbproject/build-impl.xml
