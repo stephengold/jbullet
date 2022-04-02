@@ -33,7 +33,7 @@ import javax.vecmath.Vector3f;
  * This interface allows to query for closest points and penetration depth between two (convex) objects
  * the closest point is on the second object (B), and the normal points from the surface on B towards A.
  * distance is between closest points on B and closest point on A. So you can calculate closest point on A
- * by taking <code>closestPointInA = closestPointInB + distance * normalOnSurfaceB</code>.
+ * by taking {@code closestPointInA = closestPointInB + distance * normalOnSurfaceB}.
  * 
  * @author jezek2
  */
