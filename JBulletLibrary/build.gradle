@@ -11,7 +11,7 @@ ext {
     group = 'com.github.stephengold'
     artifact = 'jbullet'
     version = jbulletVersion
-    baseName = "${artifact}-${version}"
+    baseName = "${artifact}-${version}" // for artifacts
     websiteUrl = 'https://github.com/stephengold/jbullet'
 }
 
@@ -27,6 +27,8 @@ dependencies {
 sourceSets.main.java {
     srcDirs = [rootProject.file('src')]
 }
+
+// publishing tasks:
 
 javadoc {
     // Disable doclint for JDK8+.
