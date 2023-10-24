@@ -1,6 +1,6 @@
-/.gradle
-/.nb-gradle/
-/JBulletLibrary/build/
-/build/
 /dist/
+/.gradle/
+/build/
+/JBulletLibrary/build/
+/.nb-gradle/
 /nbproject/
