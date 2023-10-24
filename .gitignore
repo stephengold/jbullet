@@ -1,6 +1,12 @@
 /dist/
+
+# Ignore Gradle's project-specific cache directory:
 /.gradle/
+
+# Ignore Gradle's build output directories:
 /build/
 /JBulletLibrary/build/
+
+# Ignore IDE-specific directories:
 /.nb-gradle/
 /nbproject/
