@@ -1,12 +1,12 @@
 /*
- * settings.gradle: global settings shared by all subprojects
+ * settings.gradle: global settings shared by all jbullet subprojects
  */
 
 rootProject.name = 'jbullet'
 
 /*
  * Enumerate subdirectories in the project's root directory that contain a
- * "build.gradle" file. Any subdirectory with a "build.gradle" file is
+ * "build.gradle" file. Any subdirectory that contains a "build.gradle" file is
  * automatically a subproject of this project.
  */
 def subDirs = rootDir.listFiles(
