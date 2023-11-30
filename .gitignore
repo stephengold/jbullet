@@ -1,8 +1,14 @@
-/.gradle/
-/.nb-gradle/
-/JBulletLibrary/build/
-/build/
 /dist/
+
+# Ignore Gradle's project-specific cache directory:
+/.gradle/
+
+# Ignore Gradle's build output directories:
+/build/
+/JBulletLibrary/build/
+
+# Ignore IDE-specific directories:
+/.nb-gradle/
 /nbproject/build-impl.xml
 /nbproject/build-impl.xml~
 /nbproject/genfiles.properties
