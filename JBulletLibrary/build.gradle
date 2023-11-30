@@ -28,7 +28,7 @@ sourceSets.main.java {
     srcDirs = [rootProject.file('src')]
 }
 
-// publishing tasks:
+// Register publishing tasks:
 
 javadoc {
     // Disable doclint for JDK8+.
