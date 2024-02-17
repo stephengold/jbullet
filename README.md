@@ -12,6 +12,6 @@ I would prefer to build everything using Gradle, but "stack-alloc" is closely ti
 
 ## External links
 + Pre-built Maven artifacts at the Maven Central Repository:  https://search.maven.org/artifact/com.github.stephengold/jbullet/1.0.2/jar
-+ JBullet project:  http://jbullet.advel.cz
++ JBullet project:  http://jbullet.advel.cz (or browse an [archived copy](https://web.archive.org/web/20240115031002/http://jbullet.advel.cz/))
 + Bullet Physics project:  https://pybullet.org/wordpress/
 + Another fork of JBullet:  https://github.com/CasperPas/JBullet
