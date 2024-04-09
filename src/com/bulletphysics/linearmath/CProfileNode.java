@@ -67,7 +67,7 @@ class CProfileNode {
 		// Try to find this sub node
 		CProfileNode child = this.child;
 		while (child != null) {
-			if (child.name == name) {
+			if (child.name.equals(name)) {
 				return child;
 			}
 			child = child.sibling;

@@ -405,7 +405,7 @@ public class ConeTwistConstraint extends TypedConstraint {
 	}
 
 	public boolean getSolveSwingLimit() {
-		return solveTwistLimit;
+		return solveSwingLimit;
 	}
 
 	public float getTwistLimitSign() {

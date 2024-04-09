@@ -33,6 +33,8 @@ package com.bulletphysics.linearmath;
 
 import com.bulletphysics.BulletStats;
 
+import java.util.Objects;
+
 /**
  * Manager for the profile system.
  * 
@@ -49,7 +51,7 @@ public class CProfileManager {
 	 * @param name must be {@link String#intern interned} String (not needed for String literals)
 	 */
 	public static void startProfile(String name) {
-		if (name != currentNode.getName()) {
+		if (!Objects.equals(name, currentNode.getName())) {
 			currentNode = currentNode.getSubNode(name);
 		}
 
