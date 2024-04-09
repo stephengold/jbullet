@@ -230,7 +230,7 @@ public class HashedOverlappingPairCache extends OverlappingPairCache {
 		if (proxy0.getUid() > proxy1.getUid()) {
 			BroadphaseProxy tmp = proxy0;
 			proxy0 = proxy1;
-			proxy1 = proxy0;
+			proxy1 = tmp;
 		}
 		int proxyId1 = proxy0.getUid();
 		int proxyId2 = proxy1.getUid();
