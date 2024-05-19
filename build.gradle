@@ -1,4 +1,4 @@
-// Gradle build script for the jbullet project
+// Gradle script to build the jbullet project
 
 plugins {
     id 'base' // to add a "clean" task to the root project

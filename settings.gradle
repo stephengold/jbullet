@@ -1,6 +1,4 @@
-/*
- * settings.gradle: global settings shared by all jbullet subprojects
- */
+// global build settings shared by all jbullet subprojects
 
 rootProject.name = 'jbullet'
 
