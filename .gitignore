@@ -8,5 +8,6 @@
 /JBulletLibrary/build/
 
 # Ignore IDE-specific directories:
+/.idea/
 /.nb-gradle/
 /nbproject/
