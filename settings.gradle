@@ -26,6 +26,6 @@ def subDirs = rootDir.listFiles(
     }
 )
 
-subDirs.each { File dir ->
-    include dir.name
+subDirs.each { File sub ->
+    include sub.name
 }
