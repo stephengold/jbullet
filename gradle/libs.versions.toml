@@ -1,0 +1,12 @@
+## catalog of libraries and plugins used to build the JBullet project
+
+[versions]
+
+[libraries]
+
+stack-alloc = "com.github.stephengold:stack-alloc:1.0.2"
+vecmath = "javax.vecmath:vecmath:1.5.2"
+
+[bundles]
+
+[plugins]

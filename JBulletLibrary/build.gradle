@@ -18,12 +18,12 @@ ext {
 }
 
 dependencies {
-    implementation (stackallocCoordinates) {
+    implementation(libs.stack.alloc) {
         exclude group: 'com.github.stephengold', module: 'asm-all'
         exclude group: 'org.apache.ant', module: 'ant'
         exclude group: 'org.apache.ant', module: 'ant-launcher'
     }
-    implementation vecmathCoordinates
+    implementation(libs.vecmath)
 }
 
 sourceSets.main.java {

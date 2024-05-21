@@ -4,11 +4,6 @@ apply plugin: 'java'
 
 group = 'com.github.stephengold'
 ext {
-    // module coordinates of dependencies:
-    stackallocCoordinates = 'com.github.stephengold:stack-alloc:1.0.2'
-    vecmathCoordinates = 'javax.vecmath:vecmath:1.5.2'
-
-    // current versions of libraries:
     jbulletVersion = '1.0.3-SNAPSHOT'
 }
 
