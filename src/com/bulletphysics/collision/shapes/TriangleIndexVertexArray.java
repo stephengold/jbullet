@@ -37,7 +37,7 @@ import java.nio.ByteBuffer;
  */
 public class TriangleIndexVertexArray extends StridingMeshInterface {
 
-	protected ObjectArrayList<IndexedMesh> indexedMeshes = new ObjectArrayList<>();
+	protected ObjectArrayList<IndexedMesh> indexedMeshes = new ObjectArrayList<IndexedMesh>();
 
 	final private ByteBufferVertexData data = new ByteBufferVertexData();
 

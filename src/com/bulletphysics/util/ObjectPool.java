@@ -34,7 +34,7 @@ import java.util.Map;
 public class ObjectPool<T> {
 	
 	final private Class<T> cls;
-	final private ObjectArrayList<T> list = new ObjectArrayList<>();
+	final private ObjectArrayList<T> list = new ObjectArrayList<T>();
 	
 	public ObjectPool(Class<T> cls) {
 		this.cls = cls;
@@ -93,7 +93,7 @@ public class ObjectPool<T> {
 		
 		ObjectPool<T> pool = (ObjectPool<T>)map.get(cls);
 		if (pool == null) {
-			pool = new ObjectPool<>(cls);
+			pool = new ObjectPool<T>(cls);
 			map.put(cls, pool);
 		}
 		

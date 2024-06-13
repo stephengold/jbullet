@@ -39,9 +39,9 @@ import javax.vecmath.Vector4f;
  */
 public class PrimitiveTriangle {
 
-	private final ObjectArrayList<Vector3f> tmpVecList1 = new ObjectArrayList<>(TriangleContact.MAX_TRI_CLIPPING);
-	private final ObjectArrayList<Vector3f> tmpVecList2 = new ObjectArrayList<>(TriangleContact.MAX_TRI_CLIPPING);
-	private final ObjectArrayList<Vector3f> tmpVecList3 = new ObjectArrayList<>(TriangleContact.MAX_TRI_CLIPPING);
+	private final ObjectArrayList<Vector3f> tmpVecList1 = new ObjectArrayList<Vector3f>(TriangleContact.MAX_TRI_CLIPPING);
+	private final ObjectArrayList<Vector3f> tmpVecList2 = new ObjectArrayList<Vector3f>(TriangleContact.MAX_TRI_CLIPPING);
+	private final ObjectArrayList<Vector3f> tmpVecList3 = new ObjectArrayList<Vector3f>(TriangleContact.MAX_TRI_CLIPPING);
 	
 	{
 		for (int i=0; i<TriangleContact.MAX_TRI_CLIPPING; i++) {

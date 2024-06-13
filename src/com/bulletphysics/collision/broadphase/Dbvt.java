@@ -67,7 +67,7 @@ public class Dbvt {
 
 	public void optimizeBottomUp() {
 		if (root != null) {
-			ObjectArrayList<Node> leaves = new ObjectArrayList<>(this.leaves);
+			ObjectArrayList<Node> leaves = new ObjectArrayList<Node>(this.leaves);
 			fetchleaves(this, root, leaves);
 			bottomup(this, leaves);
 			root = leaves.getQuick(0);
@@ -80,7 +80,7 @@ public class Dbvt {
 
 	public void optimizeTopDown(int bu_treshold) {
 		if (root != null) {
-			ObjectArrayList<Node> leaves = new ObjectArrayList<>(this.leaves);
+			ObjectArrayList<Node> leaves = new ObjectArrayList<Node>(this.leaves);
 			fetchleaves(this, root, leaves);
 			root = topdown(this, leaves, bu_treshold);
 		}
@@ -244,7 +244,7 @@ public class Dbvt {
 	public static void collideTT(Node root0, Node root1, ICollide policy) {
 		//DBVT_CHECKTYPE
 		if (root0 != null && root1 != null) {
-			ObjectArrayList<sStkNN> stack = new ObjectArrayList<>(DOUBLE_STACKSIZE);
+			ObjectArrayList<sStkNN> stack = new ObjectArrayList<sStkNN>(DOUBLE_STACKSIZE);
 			stack.add(new sStkNN(root0, root1));
 			do {
 				sStkNN p = stack.remove(stack.size() - 1);
@@ -286,7 +286,7 @@ public class Dbvt {
 	public static void collideTT(Node root0, Node root1, Transform xform, ICollide policy) {
 		//DBVT_CHECKTYPE
 		if (root0 != null && root1 != null) {
-			ObjectArrayList<sStkNN> stack = new ObjectArrayList<>(DOUBLE_STACKSIZE);
+			ObjectArrayList<sStkNN> stack = new ObjectArrayList<sStkNN>(DOUBLE_STACKSIZE);
 			stack.add(new sStkNN(root0, root1));
 			do {
 				sStkNN p = stack.remove(stack.size() - 1);
@@ -335,7 +335,7 @@ public class Dbvt {
 	public static void collideTV(Node root, DbvtAabbMm volume, ICollide policy) {
 		//DBVT_CHECKTYPE
 		if (root != null) {
-			ObjectArrayList<Node> stack = new ObjectArrayList<>(SIMPLE_STACKSIZE);
+			ObjectArrayList<Node> stack = new ObjectArrayList<Node>(SIMPLE_STACKSIZE);
 			stack.add(root);
 			do {
 				Node n = stack.remove(stack.size() - 1);
@@ -361,7 +361,7 @@ public class Dbvt {
 			Vector3f invdir = Stack.alloc(Vector3f.class);
 			invdir.set(1f / normal.x, 1f / normal.y, 1f / normal.z);
 			int[] signs = new int[] { direction.x<0 ? 1:0, direction.y<0 ? 1:0, direction.z<0 ? 1:0 };
-			ObjectArrayList<Node> stack = new ObjectArrayList<>(SIMPLE_STACKSIZE);
+			ObjectArrayList<Node> stack = new ObjectArrayList<Node>(SIMPLE_STACKSIZE);
 			stack.add(root);
 			do {
 				Node node = stack.remove(stack.size() - 1);
@@ -383,7 +383,7 @@ public class Dbvt {
 		//DBVT_CHECKTYPE
 		if (root != null) {
 			int inside = (1 << count) - 1;
-			ObjectArrayList<sStkNP> stack = new ObjectArrayList<>(SIMPLE_STACKSIZE);
+			ObjectArrayList<sStkNP> stack = new ObjectArrayList<sStkNP>(SIMPLE_STACKSIZE);
 			int[] signs = new int[4 * 8];
 			assert (count < (/*sizeof(signs)*/128 / /*sizeof(signs[0])*/ 4));
 			for (int i=0; i<count; ++i) {
@@ -435,7 +435,7 @@ public class Dbvt {
 					(sortaxis.y >= 0 ? 2 : 0) +
 					(sortaxis.z >= 0 ? 4 : 0);
 			int inside = (1 << count) - 1;
-			ObjectArrayList<sStkNPS> stock = new ObjectArrayList<>();
+			ObjectArrayList<sStkNPS> stock = new ObjectArrayList<sStkNPS>();
 			IntArrayList ifree = new IntArrayList();
 			IntArrayList stack = new IntArrayList();
 			int[] signs = new int[/*sizeof(unsigned)*8*/4 * 8];
@@ -522,7 +522,7 @@ public class Dbvt {
 	public static void collideTU(Node root, ICollide policy) {
 		//DBVT_CHECKTYPE
 		if (root != null) {
-			ObjectArrayList<Node> stack = new ObjectArrayList<>(SIMPLE_STACKSIZE);
+			ObjectArrayList<Node> stack = new ObjectArrayList<Node>(SIMPLE_STACKSIZE);
 			stack.add(root);
 			do {
 				Node n = stack.remove(stack.size() - 1);

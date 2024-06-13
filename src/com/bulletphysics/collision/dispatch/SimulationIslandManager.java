@@ -40,8 +40,8 @@ public class SimulationIslandManager {
 
 	private final UnionFind unionFind = new UnionFind();
 
-	private final ObjectArrayList<PersistentManifold> islandmanifold = new ObjectArrayList<>();
-	private final ObjectArrayList<CollisionObject> islandBodies = new ObjectArrayList<>();
+	private final ObjectArrayList<PersistentManifold> islandmanifold = new ObjectArrayList<PersistentManifold>();
+	private final ObjectArrayList<CollisionObject> islandBodies = new ObjectArrayList<CollisionObject>();
 	
 	public void initUnionFind(int n) {
 		unionFind.reset(n);

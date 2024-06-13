@@ -94,7 +94,7 @@ public class KinematicCharacterController extends ActionInterface {
 	protected Vector3f targetPosition = new Vector3f();
 
 	// keep track of the contact manifolds
-	ObjectArrayList<PersistentManifold> manifoldArray = new ObjectArrayList<>();
+	ObjectArrayList<PersistentManifold> manifoldArray = new ObjectArrayList<PersistentManifold>();
 
 	protected boolean touchingContact;
 	protected Vector3f touchingNormal = new Vector3f();

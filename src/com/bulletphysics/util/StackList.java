@@ -48,7 +48,7 @@ package com.bulletphysics.util;
  */
 public abstract class StackList<T> {
 
-	private final ObjectArrayList<T> list = new ObjectArrayList<>();
+	private final ObjectArrayList<T> list = new ObjectArrayList<T>();
 	private T returnObj;
 	
 	final private int[] stack = new int[512];
