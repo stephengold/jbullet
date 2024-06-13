@@ -20,6 +20,13 @@ do
   fi
 done;
 
+for f in *.module;
+do
+  if [ ! -f $f.asc ]; then
+    /usr/bin/gpg2 -ab $f ;
+  fi
+done;
+
 for f in *.pom;
 do
   if [ ! -f $f.asc ]; then
