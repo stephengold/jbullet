@@ -8,16 +8,16 @@ ext {
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_1_7
+    sourceCompatibility = JavaVersion.VERSION_1_6
     targetCompatibility = JavaVersion.VERSION_1_7
 }
 
 tasks.withType(JavaCompile).configureEach { // Java compile-time options:
     options.compilerArgs << '-Xdiags:verbose'
-    if (JavaVersion.current().isCompatibleWith(JavaVersion.VERSION_14)) {
-        // Suppress warnings that source value 7 is obsolete.
-        options.compilerArgs << '-Xlint:-options'
-    }
+
+    // Suppress warnings that source value 6 is obsolete:
+    options.compilerArgs << '-Xlint:-options'
+
     //options.compilerArgs << '-Xlint:unchecked' // to provide detailed warnings
     options.deprecation = true // to provide detailed deprecation warnings
     options.encoding = 'UTF-8'
