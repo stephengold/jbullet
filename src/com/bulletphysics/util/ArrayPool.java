@@ -182,7 +182,7 @@ public class ArrayPool<T> {
 		
 		ArrayPool<T> pool = (ArrayPool<T>)map.get(cls);
 		if (pool == null) {
-			pool = new ArrayPool<>(cls);
+			pool = new ArrayPool<T>(cls);
 			map.put(cls, pool);
 		}
 		

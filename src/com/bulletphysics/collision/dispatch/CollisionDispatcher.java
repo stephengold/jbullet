@@ -48,7 +48,7 @@ public class CollisionDispatcher extends Dispatcher {
 
 	private static final int MAX_BROADPHASE_COLLISION_TYPES = BroadphaseNativeType.MAX_BROADPHASE_COLLISION_TYPES.ordinal();
 	final private int count = 0;
-	private final ObjectArrayList<PersistentManifold> manifoldsPtr = new ObjectArrayList<>();
+	private final ObjectArrayList<PersistentManifold> manifoldsPtr = new ObjectArrayList<PersistentManifold>();
 	final private boolean useIslands = true;
 	private boolean staticWarningReported = false;
 	private ManifoldResult defaultManifoldResult;

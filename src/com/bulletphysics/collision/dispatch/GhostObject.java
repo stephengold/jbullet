@@ -43,7 +43,7 @@ import javax.vecmath.Vector3f;
  */
 public class GhostObject extends CollisionObject {
 
-	protected ObjectArrayList<CollisionObject> overlappingObjects = new ObjectArrayList<>();
+	protected ObjectArrayList<CollisionObject> overlappingObjects = new ObjectArrayList<CollisionObject>();
 
 	public GhostObject() {
 		this.internalType = CollisionObjectType.GHOST_OBJECT;

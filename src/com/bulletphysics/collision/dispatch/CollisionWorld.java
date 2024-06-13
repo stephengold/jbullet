@@ -67,7 +67,7 @@ public class CollisionWorld {
 
 	//protected final BulletStack stack = BulletStack.get();
 	
-	protected ObjectArrayList<CollisionObject> collisionObjects = new ObjectArrayList<>();
+	protected ObjectArrayList<CollisionObject> collisionObjects = new ObjectArrayList<CollisionObject>();
 	protected Dispatcher dispatcher1;
 	protected DispatcherInfo dispatchInfo = new DispatcherInfo();
 	//protected btStackAlloc*	m_stackAlloc;
