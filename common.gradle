@@ -4,7 +4,7 @@ apply plugin: 'java'
 
 group = 'com.github.stephengold'
 ext {
-    jbulletVersion = '1.0.3-SNAPSHOT'
+    jbulletVersion = '1.0.3'
 }
 
 java {
