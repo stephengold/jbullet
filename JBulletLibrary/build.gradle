@@ -82,6 +82,7 @@ publishing {
                 developers {
                     developer {
                         email = 'jezek2@advel.cz'
+                        id = 'jezek2'
                         name = 'Martin Dvorak'
                     }
                 }
