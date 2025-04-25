@@ -1,6 +1,6 @@
-// Gradle settings and tasks common to all jbullet subprojects
+// Gradle settings and tasks common to all JBullet subprojects
 
-apply plugin: 'java'
+apply plugin: 'java'       // to compile and test Java projects
 
 group = 'com.github.stephengold'
 ext {
