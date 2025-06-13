@@ -10,5 +10,3 @@ vecmath = "javax.vecmath:vecmath:1.5.2"
 [bundles]
 
 [plugins]
-
-validate-poms = { id = "io.freefair.maven-central.validate-poms", version = "8.13.1" }
